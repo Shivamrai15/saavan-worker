@@ -1,7 +1,7 @@
 import { z } from 'zod';
 import { DownloadSchema } from '../../common/schema';
 
-export const SearchAPIResponseModel = z.object({
+export const SearchAPISchema = z.object({
     albums: z.object({
         data: z.array(
         z.object({
@@ -130,13 +130,14 @@ export const SearchAPIResponseModel = z.object({
     })
     })
 
-    const SearchResponseModel = <T>(model: z.ZodType<T, any, any>) =>
+const SearchResponseModel = <T>(model: z.ZodType<T, any, any>) =>
     z.object({
         results: model,
         position: z.number()
-    })
+});
 
-    export const SearchModel = z.object({
+
+export const SearchSchema = z.object({
     albums: SearchResponseModel(
         z.array(
         z.object({
@@ -210,4 +211,4 @@ export const SearchAPIResponseModel = z.object({
         })
         )
     )
-})
+});

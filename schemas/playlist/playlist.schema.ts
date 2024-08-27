@@ -4,7 +4,7 @@ import { DownloadSchema } from '../../common/schema';
 import { SongAPISchema, SongSchema } from '../song';
 
 
-export const PlaylistAPIResponseModel = z.object({
+export const PlaylistAPISchema = z.object({
     id: z.string(),
     title: z.string(),
     subtitle: z.string(),
@@ -54,7 +54,7 @@ export const PlaylistAPIResponseModel = z.object({
 })
 
 
-export const PlaylistModel = z.object({
+export const PlaylistSchema = z.object({
     id: z.string(),
     name: z.string(),
     description: z.string().nullable(),
