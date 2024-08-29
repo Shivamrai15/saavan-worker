@@ -1,6 +1,6 @@
 import { z } from 'zod';
-import { DownloadSchema } from '../../common/schema';
-import { SongAPISchema, SongSchema } from '../song';
+import { DownloadSchema } from '@/common/schema';
+import { SongAPISchema, SongSchema } from '@/schemas/song';
 
 
 export const SearchAlbumAPISchema = z.object({

@@ -1,6 +1,6 @@
 import { z } from 'zod';
-import { DownloadSchema } from '../../common/schema/download.schema'
-import { ArtistMapAPISchema, ArtistMapSchema } from '../artist/index';
+import { DownloadSchema } from '@/common/schema'
+import { ArtistMapAPISchema, ArtistMapSchema } from '@/schemas/artist/map.schema';
 import { LyricsSchema } from './lyrics.schema';
 
 

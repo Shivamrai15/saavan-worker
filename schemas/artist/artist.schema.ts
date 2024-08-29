@@ -1,7 +1,7 @@
 import { z } from 'zod';
-import { DownloadSchema } from '../../common/schema';
-import { SongAPISchema, SongSchema } from '../song';
-import { AlbumAPISchema, AlbumSchema } from '../album';
+import { DownloadSchema } from '@/common/schema';
+import { SongAPISchema, SongSchema } from '@/schemas/song';
+import { AlbumAPISchema, AlbumSchema } from '@/schemas/album';
 
 
 export const ArtistAPISchema= z.object({

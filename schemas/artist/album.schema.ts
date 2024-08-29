@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { AlbumAPIResponseModel, AlbumModel } from '#modules/albums/models';
+import { AlbumAPISchema, AlbumSchema } from '@/schemas/album';
 
 
 export const ArtistAlbumAPISchema = z.object({
@@ -13,13 +13,13 @@ export const ArtistAlbumAPISchema = z.object({
     dominantLanguage: z.string(),
     dominantType: z.string(),
     topAlbums: z.object({
-        albums: z.array(AlbumAPIResponseModel),
+        albums: z.array(AlbumAPISchema),
         total: z.number()
     })
-})
+});
 
 
 export const ArtistAlbumSchema = z.object({
     total: z.number(),
-    albums: z.array(AlbumModel)
-})
+    albums: z.array(AlbumSchema)
+});

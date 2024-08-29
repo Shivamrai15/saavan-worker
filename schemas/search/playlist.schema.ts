@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { DownloadSchema } from '../../common/schema';
+import { DownloadSchema } from '@/common/schema';
 
 
 export const SearchPlaylistAPISchema = z.object({

@@ -1,9 +1,13 @@
-import { Hono } from 'hono'
+import { App } from './app';
+import { AlbumRoute, ArtistRoute, PlaylistRoute, SearchRoute, SongRoute} from '../routes';
 
-const app = new Hono()
+const app = new App([
+    new AlbumRoute(),
+    new ArtistRoute(),
+    new SongRoute(),
+    new SearchRoute(),
+    new PlaylistRoute()
+]).getApp();
 
-app.get('/', (c) => {
-    return c.text('Hello Hono!')
-})
 
-export default app
+export default app;
