@@ -31,11 +31,11 @@ export class SearchRoute implements Routes {
             operationId: 'globalSearch',
             request: {
             query: z.object({
-                query: z.string().openapi({
-                title: 'Search query',
-                description: 'Search query',
-                type: 'string',
-                example: 'Imagine Dragons'
+                    query: z.string().openapi({
+                    title: 'Search query',
+                    description: 'Search query',
+                    type: 'string',
+                    example: 'Arijit Singh'
                 })
             })
             },
@@ -78,26 +78,26 @@ export class SearchRoute implements Routes {
             operationId: 'searchSongs',
             request: {
             query: z.object({
-                query: z.string().openapi({
-                title: 'Search query',
-                description: 'Search query for songs',
-                type: 'string',
-                example: 'Believer'
-                }),
-                page: z.string().pipe(z.coerce.number()).optional().openapi({
-                title: 'Page Number',
-                description: 'The page number of the search results to retrieve',
-                type: 'integer',
-                example: '0',
-                default: '0'
-                }),
-                limit: z.string().pipe(z.coerce.number()).optional().openapi({
-                title: 'Limit',
-                description: 'Number of search results per page',
-                type: 'integer',
-                example: '10',
-                default: '10'
-                })
+                    query: z.string().openapi({
+                        title: 'Search query',
+                        description: 'Search query for songs',
+                        type: 'string',
+                        example: 'Dance Monkey'
+                    }),
+                    page: z.string().pipe(z.coerce.number()).optional().openapi({
+                        title: 'Page Number',
+                        description: 'The page number of the search results to retrieve',
+                        type: 'integer',
+                        example: '0',
+                        default: '0'
+                    }),
+                    limit: z.string().pipe(z.coerce.number()).optional().openapi({
+                        title: 'Limit',
+                        description: 'Number of search results per page',
+                        type: 'integer',
+                        example: '10',
+                        default: '10'
+                    })
             })
             },
             responses: {
@@ -142,7 +142,7 @@ export class SearchRoute implements Routes {
                 query: z.string().openapi({
                 description: 'Search query for albums',
                 type: 'string',
-                example: 'Evolve'
+                example: 'Munjya'
                 }),
                 page: z.string().pipe(z.coerce.number()).optional().openapi({
                 description: 'The page number of the search results to retrieve',
@@ -201,7 +201,7 @@ export class SearchRoute implements Routes {
                 title: 'Search query',
                 description: 'Search query for artists',
                 type: 'string',
-                example: 'Adele'
+                example: 'Diljit Dosanjh'
                 }),
                 page: z.string().pipe(z.coerce.number()).optional().openapi({
                 title: 'Page Number',
@@ -261,7 +261,7 @@ export class SearchRoute implements Routes {
                 title: 'Search query',
                 description: 'Search query for playlists',
                 type: 'string',
-                example: 'Indie'
+                example: 'Hits of 70s'
                 }),
                 page: z.string().pipe(z.coerce.number()).optional().openapi({
                 title: 'Page Number',

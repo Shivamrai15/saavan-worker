@@ -1,8 +1,10 @@
+import { cors } from 'hono/cors';
 import { logger } from 'hono/logger';
 import { OpenAPIHono } from '@hono/zod-openapi';
 import type { HTTPException } from 'hono/http-exception';
 import { prettyJSON } from 'hono/pretty-json';
 import type { Routes } from '../common/types';
+
 
 
 export class App {
@@ -28,6 +30,7 @@ export class App {
     private initializeGlobalMiddlewares() {
         this.app.use(logger())
         this.app.use(prettyJSON())
+        this.app.use(cors())
     }
 
     private initializeSwaggerUI() {
